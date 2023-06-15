@@ -12,3 +12,4 @@ int main(void)
 /* The puts function prints out the string with a newline */
 printf("with proper grammar, but the outcome is a piece of art,");
 return (0);
+}
