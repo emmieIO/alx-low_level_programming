@@ -10,6 +10,6 @@
 int main(void)
 {
 /* The puts function prints out the string with a newline */
-printf("with proper grammar, but the outcome is a piece of art,");
+printf("with proper grammar, but the outcome is a piece of art,\n");
 return (0);
 }
