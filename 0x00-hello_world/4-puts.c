@@ -10,6 +10,6 @@
 int main(void)
 {
 /* The puts function prints out the string with a newline */
-puts("\"Programming is like building a multilingual puzzle\n");
+puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
