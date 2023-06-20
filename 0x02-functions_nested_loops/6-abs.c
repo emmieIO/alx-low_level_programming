@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * custom_abs - Computes the absolute value of a number.
+ * _abs - Computes the absolute value of a number.
  * @n: The number for which to compute the absolute value.
  *
  * Return: The absolute value of the given number.
