@@ -4,8 +4,6 @@
  * print_alphabet - function.
  *
  * Description: function to print alphabets.
- *
- * Return : Always returns (0) Success
  */
 
 void print_alphabet(void)
@@ -16,6 +14,7 @@ void print_alphabet(void)
 	{
 		putchar(letter);
 	}
+	putchar('\n');
 }
 
 /**
@@ -28,6 +27,6 @@ void print_alphabet(void)
 
 int main(void)
 {
-	 print_alphabet();
+	print_alphabet();
 	return (0);
 }
