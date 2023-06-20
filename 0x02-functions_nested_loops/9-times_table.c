@@ -1,42 +1,40 @@
 #include "main.h"
-#include <unistd.h>
-
 /**
- * times_table - Generates a times time table from 0 to 9.
- *
- * Description:
- *     This function generates a times table from 0 to 9
- *     and uses the write() function to print the table.
- */
+* times_table - function
+*
+* Return: empty output
+*
+*/
+
 void times_table(void)
 {
-int table[10][10];
-int i, j;
-char buffer[5]; /* Buffer to store the formatted number */
+int x, y, z, u, d;
 
-/* Generate the times table */
-for (i = 0; i < 10; i++)
+for (x = 0; x <= 9; x++)
 {
-for (j = 0; j < 10; j++)
+for (y = 0; y <= 9; y++)
 {
-table[i][j] = i * j;
-}
-}
-
-/* Print the times table */
-for (i = 0; i < 10; i++)
+z = x * y;
+if (z > 0)
 {
-for (j = 0; j < 10; j++)
+u = z % 10;
+d = (z - u) / 10;
+_putchar(44);
+_putchar(32);
+_putchar(d + '0');
+_putchar(u + '0');
+}
+else
 {
-/* Format the number and store it in the buffer */
-snprintf(buffer, sizeof(buffer), "%d ", table[i][j]);
-
-/* Write the formatted number to the standard output */
-write(STDOUT_FILENO, buffer, sizeof(buffer) - 1);
+if (y != 0)
+{
+_putchar(44);
+_putchar(32);
+_putchar(32);
 }
-
-/* Write a newline character to the standard output */
-write(STDOUT_FILENO, "\n", 1);
+_putchar(z + '0');
 }
 }
-
+_putchar('\n')
+}
+}
