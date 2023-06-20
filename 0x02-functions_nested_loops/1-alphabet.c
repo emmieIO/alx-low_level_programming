@@ -7,7 +7,8 @@
  *
  * Return : Always returns (0) Success
  */
-int print_alphabet(void)
+
+void print_alphabet(void)
 {
 	char letter;
 
@@ -15,8 +16,8 @@ int print_alphabet(void)
 	{
 		putchar(letter);
 	}
-	return (0);
 }
+
 /**
  * main - Program Enty point.
  *
@@ -24,8 +25,9 @@ int print_alphabet(void)
  *
  * Return : Always returns (0) Success
  */
+
 int main(void)
 {
-	print_alphabet();
+	 print_alphabet();
 	return (0);
 }
