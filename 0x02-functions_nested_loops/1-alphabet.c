@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * print_alphabet - function.
@@ -15,18 +15,4 @@ void print_alphabet(void)
 		putchar(letter);
 	}
 	putchar('\n');
-}
-
-/**
- * main - Program Enty point.
- *
- * Description: calls function to print alphabets.
- *
- * Return : Always returns (0) Success
- */
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
 }
