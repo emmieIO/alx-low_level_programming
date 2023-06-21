@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <time.h>
 /**
  * positive_or_negative - Entry point of the program
  *
@@ -14,8 +12,6 @@ int positive_or_negative(int i)
 {
 
 
-srand(time(0));
-i = rand() - RAND_MAX / 2;
 
 if (i == 0)
 {
