@@ -22,7 +22,7 @@ else
 {
 if (month > 2)
 {
-day++; // Account for the extra day in a leap year
+day++; /* Account for the extra day in a leap year */
 }
 
 printf("Day of the year: %d\n", day);
