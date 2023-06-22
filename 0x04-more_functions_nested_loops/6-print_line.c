@@ -6,9 +6,10 @@
  */
 void print_line(int n)
 {
-for (int i = 0; i < n; i++)
+int i;
+for (i = 0; i < n; i++)
 {
-_putchar(95);  /* Print an underscore character */
+_putchar(95);
 }
-_printf("\n");  /* Print a newline character */
+_putchar('\n');
 }
