@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - Entry point of the program
  *
@@ -16,9 +16,14 @@
 int main(void)
 {
 int i;
-for (i = 1; i <= 100; i++)
+for (i = 0; i <= 100; i++)
 {
-if (i % 3 == 0 && i % 5 == 0)
+if(i == 0)
+{
+i++;
+}
+
+else if (i % 3 == 0 && i % 5 == 0)
 {
 printf("FizzBuzz ");
 }
