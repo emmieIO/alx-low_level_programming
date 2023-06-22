@@ -5,7 +5,7 @@
  * @size: The size of the square (number of rows and columns).
  */
 
-int print_square(int size)
+void print_square(int size)
 {
 int i, j;
 
