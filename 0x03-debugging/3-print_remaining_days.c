@@ -29,7 +29,7 @@ int day_of_year = convert_day(month, day);
 
 if (is_leap_year && month > 2)
 {
-day_of_year++; // Account for the extra day in a leap year
+day_of_year++;
 }
 
 printf("Day of the year: %d\n", day_of_year);
