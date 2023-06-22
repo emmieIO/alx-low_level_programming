@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * print_diagonal - Print a diagonal line with spaces and backslashes
@@ -9,7 +9,7 @@ void print_diagonal(int n)
 int i, j;
 if (n <= 0)
 {
-putchar('\n');
+_putchar('\n');
 }
 else
 {
@@ -17,10 +17,10 @@ for (i = 1; i <= n; i++)
 {
 for (j = 0; j <= i; j++)
 {
-putchar(' ');
+_putchar(' ');
 }
-putchar('\\');
-putchar('\n');
+_putchar('\\');
+_putchar('\n');
 }
 }
 }
