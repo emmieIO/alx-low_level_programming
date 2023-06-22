@@ -33,7 +33,7 @@ else
 {
 printf("%d", i);
 }
-printf(" ")
+printf(" ");
 }
 
 printf("\n");
