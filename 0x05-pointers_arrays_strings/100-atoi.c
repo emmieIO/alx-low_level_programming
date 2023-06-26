@@ -1,7 +1,7 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * _atoi - Converts a string to an integer.
+ * _atoi - Convert a string to an integer.
  * @s: The string to convert.
  *
  * Return: The converted integer.
@@ -12,35 +12,25 @@ int sign = 1;
 int result = 0;
 int i = 0;
 
-if (s[0] == '-')
+/* Skip whitespace characters */
+while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13))
+i++;
+
+/* Check for sign */
+if (s[i] == '-' || s[i] == '+')
 {
-sign = -1;
+sign = (s[i] == '-') ? -1 : 1;
 i++;
 }
 
-while (s[i] != '\0')
+/* Convert digits to integer */
+while (s[i] >= '0' && s[i] <= '9')
 {
-if (s[i] >= '0' && s[i] <= '9')
-{
-int digit = s[i] - '0';
+/* Check for overflow */
+if (result > (INT_MAX - (s[i] - '0')) / 10)
+return (0); /* Overflow occurred, return 0 */
 
-
-if (result > INT_MAX / 10 || (result == INT_MAX / 10 && digit > INT_MAX % 10))
-{
-if (sign == 1)
-return INT_MAX;
-else
-return INT_MIN;
-}
-
-result = result * 10 + digit;
-}
-else
-{
-
-break;
-}
-
+result = result * 10 + (s[i] - '0');
 i++;
 }
 
