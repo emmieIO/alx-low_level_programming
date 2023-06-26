@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * void reset_to_98 - function to be executed
+ * reset_to_98 - function to be executed
+ * @n: - pointer to int n
  *
- * */
+ */
 
 void reset_to_98(int *n)
 {
