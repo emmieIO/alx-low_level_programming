@@ -11,6 +11,7 @@ int _atoi(char *s)
 int sign = 1;
 int result = 0;
 int i = 0;
+int t = sign * result;
 
 while (s[i] != '\0')
 {
@@ -28,5 +29,5 @@ break;
 i++;
 }
 
-return (sign * result);
+return (t);
 }
