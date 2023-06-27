@@ -7,31 +7,52 @@
  *
  * Return: The converted integer.
  */
+
 int _atoi(char *s)
 {
 int sign = 1;
 int result = 0;
-int i = 0;
+int digit;
+int foundDigit = 0;
 
-/* Skip whitespace characters */
-while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13))
-i++;
-
-/* Check for sign */
-if (s[i] == '-' || s[i] == '+') {
-sign = (s[i] == '-') ? -1 : 1;
-i++;
+while (*s == ' ')
+{
+s++;
 }
 
-/* Convert digits to integer */
-while (s[i] >= '0' && s[i] <= '9') {
-/* Check for overflow */
-if (result > (INT_MAX - (s[i] - '0')) / 10)
-return 0; /* Overflow occurred, return 0 */
-
-result = result * 10 + (s[i] - '0');
-i++;
+if (*s == '-' || *s == '+')
+{
+if (*s == '-')
+sign *= -1;
+s++;
 }
 
-return (sign * result);
+while (*s)
+{
+if (*s >= '0' && *s <= '9')
+{
+digit = *s - '0';
+foundDigit = 1;
+
+
+if (result > (INT_MAX / 10) || (result == (INT_MAX / 10) && digit > (INT_MAX % 10)))
+{
+if (sign == 1)
+return INT_MAX;
+else
+return INT_MIN;
+}
+
+
+result = (result * 10) + digit;
+} else {
+
+if (foundDigit)
+break;
+}
+
+s++;
+}
+
+return result * sign;
 }
