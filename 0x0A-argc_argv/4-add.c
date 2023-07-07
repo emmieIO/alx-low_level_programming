@@ -9,26 +9,36 @@
  *
  * Return: returns success
  */
-int main(int argc __attribute__((unused)), char *argv[])
-{
-int count = 0;
-int result = 0;
 
-while (argv[count])
+int main(int argc, char *argv[])
 {
-int value = atoi(argv[count]);
+	int sum = 0;
+	int i, j;
 
-if (!isdigit(argv[count][0]))
-{
-printf("Error\n");
-return (1);
-}
-else
-{
-result += value;
-}
-count++;
-}
-printf("%d\n", result);
-return (0);
+	if (argc == 1)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	for (i = 1; i < argc; i++)
+	{
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+
+		int num = atoi(argv[i]);
+
+		sum += num;
+	}
+
+
+	printf("%d\n", sum);
+
+	return (0);
 }
