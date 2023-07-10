@@ -14,7 +14,9 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	size_t total_len, len1, len2;
+	size_t total_len;
+	size_t len1;
+	size_t len2;
 	char *concatenated_str;
 
 	len1 = strlen(s1);
