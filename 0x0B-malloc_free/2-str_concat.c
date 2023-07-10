@@ -18,8 +18,9 @@ char *str_concat(char *s1, char *s2)
 	size_t len1 = strlen(s1);
 	size_t len2 = strlen(s2);
 	size_t total_len = len1 + len2;
+	char *concatenated_str;
 
-	char *concatenated_str = (char *)malloc((total_len + 1) * sizeof(char));
+	concatenated_str = (char *)malloc((total_len + 1) * sizeof(char));
 
 	if (concatenated_str == NULL)
 		return NULL;
