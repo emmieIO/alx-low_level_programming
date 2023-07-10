@@ -31,11 +31,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (concatenated_str == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	strcpy(concatenated_str, s1);
 	strcat(concatenated_str, s2);
 
-	return concatenated_str;
+	return (concatenated_str);
 }
