@@ -21,23 +21,31 @@ unsigned int s1_len, s2_len, concat_len;
 char *concat;
 
 if (s1 == NULL)
+{
 s1 = "";
+}
 if (s2 == NULL)
+{
 s2 = "";
+}
 
 s1_len = strlen(s1);
 s2_len = strlen(s2);
 
 
 if (n >= s2_len)
-n = s2_len;
+{
+    n = s2_len;
+}
 
 concat_len = s1_len + n;
 
 
 concat = malloc((concat_len + 1) * sizeof(char));
 if (concat == NULL)
+{
 return (NULL);
+}
 
 
 strncpy(concat, s1, s1_len);
