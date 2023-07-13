@@ -10,9 +10,12 @@
  * Return: On success, returns a pointer to the concatenated string.
  * On failure, returns NULL.
  *
- * Description: The returned pointer points to a newly allocated space in memory,
- * containing s1 followed by the first n bytes of s2, and null terminated.
- * If n is greater or equal to the length of s2, the entire string s2 is used.
+ * Description: The returned pointer points to a newly
+ * allocated space in memory,
+ * containing s1 followed by the first n bytes of s2,
+ * and null terminated.
+ * If n is greater or equal to the length of s2,
+ * the entire string s2 is used.
  * If NULL is passed for s1 or s2, it is treated as an empty string.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -35,7 +38,7 @@ s2_len = strlen(s2);
 
 if (n >= s2_len)
 {
-    n = s2_len;
+n = s2_len;
 }
 
 concat_len = s1_len + n;
