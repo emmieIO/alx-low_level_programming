@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <limits.h> // Added for UINT_MAX
+#include <limits.h>
 #include "lists.h"
 
 /**
