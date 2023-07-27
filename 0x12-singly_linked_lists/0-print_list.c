@@ -1,49 +1,25 @@
 #include <stdio.h>
-#include <limits.h>
 #include "lists.h"
 
 /**
- * print_list - Prints all elements of a list_t linked list.
- * @h: A pointer to the head of the list_t list.
+ * print_list - prints all the elements of a linked list
+ * @h: pointer to the list_t list to print
  *
- * Return: If an error occurs - 0. 
- *         Otherwise - The number of nodes in the list.
- */ 
+ * Return: the number of nodes printed
+ */
 size_t print_list(const list_t *h)
 {
-unsigned int nodes = 0;
-int error = 0;
+	size_t s = 0;
 
-if (h == NULL) /* Check for empty list */
-{
-return (0);
-}
+	while (h)
+	{
+		if (!h->str)
+			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
+		h = h->next;
+		s++;
+	}
 
-while (h != NULL) 
-{
-if (nodes > UINT_MAX) /* Check for overflow */
-{
-error = 1;
-break;
-}
-
-if (h->str == NULL) /* Check for NULL string */
-{
-printf("[%u] (nil)\n", nodes);
-}
-else
-{
-printf("[%u] %s\n", nodes, h->str);
-}
-
-nodes++;
-h = h->next;
-}
-
-if (error)
-{
-return (0);
-}
-
-return (nodes);
+	return (s);
 }
