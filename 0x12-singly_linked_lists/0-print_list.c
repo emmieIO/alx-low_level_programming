@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h> // Added for UINT_MAX
 #include "lists.h"
 
 /**
@@ -7,29 +8,29 @@
  *
  * Return: If an error occurs - 0. 
  *         Otherwise - The number of nodes in the list.
-*/
+ */ 
 size_t print_list(const list_t *h)
 {
 unsigned int nodes = 0;
 int error = 0;
 
-if (h == NULL) // Check for empty list
+if (h == NULL) /* Check for empty list */
 {
 return (0);
 }
 
-while (h != NULL)
+while (h != NULL) 
 {
-if (nodes > UINT_MAX) // Check for overflow
+if (nodes > UINT_MAX) /* Check for overflow */
 {
 error = 1;
 break;
 }
 
-if (h->str == NULL) // Check for NULL string
+if (h->str == NULL) /* Check for NULL string */
 {
 printf("[%u] (nil)\n", nodes);
-} 
+}
 else
 {
 printf("[%u] %s\n", nodes, h->str);
@@ -41,7 +42,7 @@ h = h->next;
 
 if (error)
 {
-return (0); 
+return (0);
 }
 
 return (nodes);
