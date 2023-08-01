@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function to add an element to a linked list
+ * add_nodeint - Function to add an element to the beginnig linked list
  * @head:	head param
  * @n:		data param
  *
