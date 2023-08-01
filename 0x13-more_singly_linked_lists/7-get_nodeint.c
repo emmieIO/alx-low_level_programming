@@ -18,7 +18,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	if (head != NULL)
 	{
 		currentPos = head;
-		while (currentPos->next != NULL)
+		while (currentPos != NULL)
 		{
 		if (counter == index)
 		{
