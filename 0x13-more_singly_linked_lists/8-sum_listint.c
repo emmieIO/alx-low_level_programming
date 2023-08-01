@@ -9,19 +9,19 @@
 int sum_listint(listint_t *head)
 {
 	listint_t *temp;
-	int sum,data;
-	
+	int sum;
+	temp = head;
+	sum = 0;
 
 	if (head == NULL)
 	{
 		return (0);
 	}
 
-	temp = head;
-	data = temp->data;
-	while (temp->next != NULL)
+	while (temp != NULL)
 	{
-		sum += data;
+		sum += temp->n;
+		
 		temp = temp->next;
 	}
 
