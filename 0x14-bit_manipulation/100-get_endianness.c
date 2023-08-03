@@ -10,5 +10,5 @@ int get_endianness(void)
 	unsigned int test = 1;
 	unsigned char *byte_pointer = (unsigned char *)&test;
 
-	return (*byte_pointer) ? 1 : 0;
+	return ((*byte_pointer) ? 1 : 0);
 }
