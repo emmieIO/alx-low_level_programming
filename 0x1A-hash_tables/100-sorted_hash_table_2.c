@@ -33,7 +33,8 @@ void shash_table_delete(shash_table_t *ht)
 }
 
 /**
- * add_to_sorted_list - Add a node to the sorted linked list of a sorted hash table.
+ * add_to_sorted_list - Add a node to the sorted
+ * linked list of a sorted hash table.
  * @ht: The sorted hash table.
  * @new_node: The node to add.
  */
@@ -62,7 +63,7 @@ void add_to_sorted_list(shash_table_t *ht, shash_node_t *new_node)
 					new_node->snext = current;
 					current->sprev = new_node;
 					ht->shead = new_node;
-				}else
+				} else
 				{
 					new_node->sprev = current->sprev;
 					new_node->snext = current;
