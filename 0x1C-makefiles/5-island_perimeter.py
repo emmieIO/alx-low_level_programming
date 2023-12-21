@@ -1,5 +1,6 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Init Island Perimeter"""
+
 
 def island_perimeter(grid):
     """Function definition"""
